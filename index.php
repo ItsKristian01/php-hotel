@@ -50,6 +50,15 @@
     <title>Hotel</title>
 </head>
 <body>
-    
+    <?php for ( $i = 0; $i < count($hotels); $i++) {
+        $cur_hotel = $hotels[$i]; ?>
+        <div>
+            <h3> <?php echo $cur_hotel['name']; ?></h3>
+            <p><?php echo $cur_hotel['description']; ?></p>
+            <p><?php echo $cur_hotel['parking'] ? 'true': 'false'; ?></p>
+            <p><?php echo $cur_hotel['vote']; ?></p>
+            <p><?php echo $cur_hotel['distance_to_center']; ?></p>
+        </div>
+    <?php } ?>
 </body>
 </html>
