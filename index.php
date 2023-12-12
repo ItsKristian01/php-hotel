@@ -58,7 +58,7 @@ $hotels = [
         <div class="container">
             <table class="table table-striped">
                 <thead>
-                    <tr>
+                    <tr class="table-dark">
                         <th scope="col">#</th>
                         <th scope="col">Hotels</th>
                         <th scope="col">Description</th>
@@ -70,7 +70,7 @@ $hotels = [
 
                 <?php foreach ($hotels as $key => $hotel) { ?>
                     <tbody>
-                        <tr>
+                        <tr class="table-dark">
                             <th scope="row"><?php echo $key; ?></th>
                             <td><?php echo $hotel['name']; ?></td>
                             <td><?php echo $hotel['description']; ?></td>
