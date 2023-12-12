@@ -56,6 +56,21 @@ $hotels = [
 <body>
     <div class="wrap">
         <div class="container">
+
+            <?php
+            if (isset($_GET['park']) && $_GET['park'] !== '') {
+                $hotels = array_filter($hotels, function ($hotels) {
+                    return $hotels['parking'] === $_GET['park'];
+                });
+            }
+            ?>
+            <form action="index.php" method="GET" class="form mb-3 mt-3">
+                <select class="form-select" aria-label="Default select example" id="park" name="park">
+                    <option selected> Select an option</option>
+                    <option value="1">Hotels with parking</option>
+                </select>
+            </form>
+
             <table class="table table-striped">
                 <thead>
                     <tr class="table-dark">
