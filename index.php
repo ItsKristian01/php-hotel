@@ -66,11 +66,11 @@ $hotels = [
                 <th scope="col">Distance to center</th>
             </tr>
         </thead>
-        
+
         <?php foreach ($hotels as $key => $hotel) { ?>
         <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"><?php echo $key; ?></th>
                     <td><?php echo $hotel['name']; ?></td>
                     <td><?php echo $hotel['description']; ?></td>
                     <td><?php echo $hotel['parking'] ? 'true' : 'false'; ?></td>
